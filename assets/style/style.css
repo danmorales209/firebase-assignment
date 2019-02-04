@@ -1,0 +1,12 @@
+.top-border{
+    border-top: 1px solid #e9ecef;
+}
+
+.top-border:hover {
+    background-color: #f7f7f7;
+}
+
+.table-header, .table-header p {
+    margin: 1px auto;
+    font-size: 1em;
+}
