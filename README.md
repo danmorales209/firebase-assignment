@@ -1,1 +1,2 @@
-#Readme for Firebase assignment
+#Firebase Train Scheduler
+This app allows the user to use the form to enter data about trains, save to the server, and dynamically generate page content. The page will updated every minute to update minutes to next arriaval and the next arrival time.
