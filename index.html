@@ -7,16 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Firebase Assignment</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="assets/style/style.css">
 
 
@@ -30,37 +40,60 @@
                 <p class="lead"> CHOO CHOO</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-sm-3">
             <div class="col">
                 <div class="card">
-                    <h3 class="card-header">Current Schedule</h3>
+                    <h4 class="card-header">Current Schedule</h4>
                     <div id="schedule-container" class="card-body">
-
+                        <div class="row text-center">
+                            <div class="col-3">
+                                <h5>Train Name</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Destination</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Frequency (min)</h5>
+                            </div>
+                            <div class="col-3">
+                                <h5>Next Arrival</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Minutes Away</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-sm-3">
             <div class="col">
                 <div class="card">
-                    <h3 class="card-header">Look at Me</h3>
-                    <p class="card-body">Some more text</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <h3 class="card-header">Input Form</h3>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <input type="text" placeholder="look at this shiz">
+                    <h4 class="card-header">Input Form</h4>
+                    <form class="card-body">
+                        <div class="form-group my-1">
+                            <label for="train-name" class="mb-0">Train Name</label>
+                            <input type="text" id="train-name" class="form-control mt-0" placeholder="Hogwarts Express">
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="destination" class="mb-0">Destination</label>
+                            <input type="text" id="destination" class="form-control mt-0" placeholder="Hogwarts">
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="train-time" class="mb-0">Departure Time (HH:MM - Millitary Time)</label>
+                            <input type="text" id="train-time" class="form-control mt-0" placeholder="HH:MM">
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="frequency" class="mb-0">Frequency (minutes)</label>
+                            <input type="text" id="frequency" class="form-control mt-0" placeholder="70">
+                        </div>
+                        <button id="add-train" class="btn btn-primary">Add Train</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="assets/javascript/code.js"></script>
 </body>
 
 </html>
